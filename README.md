@@ -7,3 +7,5 @@
 ## Can include numbers
 
 ## Can include special characters
+
+  ![Password Generator](./assets/Password-Generator-Img.png)
