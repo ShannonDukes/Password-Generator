@@ -25,7 +25,7 @@ function generatePassword() {
         OptionSpecialCharacters = confirm("Do you want special characters?");
 
         // verify at least one char type
-        if(OptionLowerCase || OptionUpperCase || OptionNumeric || OptionSpecialCharacters) {
+        if (OptionLowerCase || OptionUpperCase || OptionNumeric || OptionSpecialCharacters) {
             return passwordChars = createPassword(passwordLength, [OptionLowerCase, OptionUpperCase, OptionNumeric, OptionSpecialCharacters]);
         }
         else {
@@ -44,17 +44,17 @@ function createPassword(pLength, pOptions) {
     const numbersSet = "0123456789";
     const specialCharsSet = "~`!@#$%^&*()_-+={[}]|:;<,>./?";
 
-    for(var i = 0; i < pLength; i++) {
+    for (var i = 0; i < pLength; i++) {
         // choose what type of char you'll generate during this loop
         var randomSet;
 
         // make sure it's a character that is valid according to user specifications
         do {
             randomSet = Math.floor(Math.random() * pOptions.length);
-        } while(!pOptions[randomSet]);
+        } while (!pOptions[randomSet]);
 
         // generate a character based on the type randomly chosen
-        switch(randomSet) {
+        switch (randomSet) {
             case 0: // lowercase
                 generatedPassword += lowerCaseSet[Math.floor(Math.random() * lowerCaseSet.length)];
                 break;
